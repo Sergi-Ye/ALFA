@@ -43,7 +43,7 @@ import org.jdatepicker.DateModel;
  * all the events that it can receive from it. For each event received the
  * controller performs an action.
  *
- * @author Francesc Perez
+ * @author ALFA
  * @version 1.1.0
  */
 public class ControllerImplementation implements IController, ActionListener {
