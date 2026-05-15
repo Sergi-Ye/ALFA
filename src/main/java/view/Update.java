@@ -96,6 +96,11 @@ public class Update extends javax.swing.JDialog {
         update.setMaximumSize(new java.awt.Dimension(194, 33));
         update.setMinimumSize(new java.awt.Dimension(194, 33));
         update.setPreferredSize(new java.awt.Dimension(194, 33));
+        update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
@@ -390,6 +395,9 @@ public class Update extends javax.swing.JDialog {
         name.setForeground(Color.black);
     }//GEN-LAST:event_nameMouseClicked
 
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateActionPerformed
     private void nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameKeyTyped
         if(name.getForeground().equals(new Color(153, 153, 153))){
                 name.setText("");
