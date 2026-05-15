@@ -206,6 +206,9 @@ public class Update extends javax.swing.JDialog {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 nameKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nameKeyTyped(evt);
+            }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -302,6 +305,10 @@ public class Update extends javax.swing.JDialog {
     }//GEN-LAST:event_nifKeyReleased
 
     private void nifKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nifKeyTyped
+        if(nif.getForeground().equals(new Color(153, 153, 153))){
+                nif.setText("");
+                nif.setForeground(Color.black);
+        }
         if (!isNumber(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only numbers [0-9]", this.getTitle(), JOptionPane.ERROR_MESSAGE);
             evt.consume();
@@ -368,6 +375,13 @@ public class Update extends javax.swing.JDialog {
         name.setText("");
         name.setForeground(Color.black);
     }//GEN-LAST:event_nameMouseClicked
+
+    private void nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameKeyTyped
+        if(name.getForeground().equals(new Color(153, 153, 153))){
+                name.setText("");
+                name.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_nameKeyTyped
 
     /**
      * @param args the command line arguments
