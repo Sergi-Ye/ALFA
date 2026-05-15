@@ -199,6 +199,20 @@ public class Read extends javax.swing.JDialog {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 24);
         getContentPane().add(dateOfBirth, gridBagConstraints);
+        JButton button = (JButton) dateOfBirth.getComponent(1);
+        button.setText("Select a date");
+
+        // tamaño del botón
+        button.setPreferredSize(new java.awt.Dimension(100, 22));
+        button.setMinimumSize(new java.awt.Dimension(100, 22));
+        button.setMaximumSize(new java.awt.Dimension(100, 22));
+
+        // quitar margen interno
+        button.setMargin(new java.awt.Insets(0,0,0,0));
+
+        // refrescar
+        button.revalidate();
+        button.repaint();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 8)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -220,6 +220,20 @@ public class Update extends javax.swing.JDialog {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 24);
         getContentPane().add(dateOfBirth, gridBagConstraints);
+        JButton button = (JButton) dateOfBirth.getComponent(1);
+        button.setText("Select a date");
+
+        // tamaño del botón
+        button.setPreferredSize(new java.awt.Dimension(100, 22));
+        button.setMinimumSize(new java.awt.Dimension(100, 22));
+        button.setMaximumSize(new java.awt.Dimension(100, 22));
+
+        // quitar margen interno
+        button.setMargin(new java.awt.Insets(0,0,0,0));
+
+        // refrescar
+        button.revalidate();
+        button.repaint();
 
         reset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         reset.setText("RESET");
