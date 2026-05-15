@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.Color;
 import static utils.DataValidation.calculateNifLetter;
 import static utils.DataValidation.isNumber;
 
@@ -91,9 +92,16 @@ public class Delete extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);
         getContentPane().add(delete, gridBagConstraints);
 
+        nif.setForeground(new java.awt.Color(153, 153, 153));
+        nif.setText("Enter NIF number, letter is calculated (e.g., 12345678)");
         nif.setMaximumSize(new java.awt.Dimension(400, 22));
         nif.setMinimumSize(new java.awt.Dimension(400, 22));
         nif.setPreferredSize(new java.awt.Dimension(400, 22));
+        nif.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nifMouseClicked(evt);
+            }
+        });
         nif.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 nifKeyPressed(evt);
@@ -176,6 +184,11 @@ public class Delete extends javax.swing.JDialog {
         nif.setEditable(true);
         delete.setEnabled(false);
     }//GEN-LAST:event_resetActionPerformed
+
+    private void nifMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nifMouseClicked
+        nif.setText("");
+        nif.setForeground(Color.black);
+    }//GEN-LAST:event_nifMouseClicked
 
     /**
      * @param args the command line arguments
