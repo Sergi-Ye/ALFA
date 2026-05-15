@@ -45,4 +45,8 @@ public class DAOArrayList implements IDAO{
         return people;
     }
    
+    @Override
+    public int count() {
+        return people.size();
+    }
 }
