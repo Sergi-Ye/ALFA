@@ -382,8 +382,6 @@ public class Insert extends javax.swing.JDialog {
         name.setText("");
         name.setForeground(Color.black);
     }//GEN-LAST:event_nameMouseClicked
-    private void dateOfBirthActionPerformed(java.awt.event.ActionEvent evt) {
-
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameActionPerformed
