@@ -321,9 +321,9 @@ public class Insert extends javax.swing.JDialog {
     }//GEN-LAST:event_resetActionPerformed
 
     private void nifKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nifKeyTyped
-        if(nif.getForeground().equals(new Color(153, 153, 153))){
-                nif.setText("");
-                nif.setForeground(Color.black);
+        if (nif.getForeground().equals(new Color(153, 153, 153))) {
+            nif.setText("");
+            nif.setForeground(Color.black);
         }
         if (!isNumber(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only numbers [0-9]", this.getTitle(), JOptionPane.ERROR_MESSAGE);
@@ -332,9 +332,9 @@ public class Insert extends javax.swing.JDialog {
     }//GEN-LAST:event_nifKeyTyped
 
     private void nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameKeyTyped
-        if(name.getForeground().equals(new Color(153, 153, 153))){
-                name.setText("");
-                name.setForeground(Color.black);
+        if (name.getForeground().equals(new Color(153, 153, 153))) {
+            name.setText("");
+            name.setForeground(Color.black);
         }
         if (!isLetter(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only uppercase or lowercase letters, hyphens, and whitespace.", this.getTitle(), JOptionPane.ERROR_MESSAGE);
@@ -387,6 +387,8 @@ public class Insert extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_nameActionPerformed
 
+    private void dateOfBirthActionPerformed(java.awt.event.ActionEvent evt) {
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.jdatepicker.JDatePicker dateOfBirth;
     private javax.swing.JButton insert;
