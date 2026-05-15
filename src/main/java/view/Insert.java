@@ -20,8 +20,9 @@ import org.jdatepicker.DateModel;
 import org.jdatepicker.JDatePicker;
 
 /**
- * Interface used to register a person. It is mandatory to enter at least the 
+ * Interface used to register a person. It is mandatory to enter at least the
  * NIF and the name.
+ *
  * @author Francesc Perez
  * @version 1.1.0
  */
@@ -256,6 +257,11 @@ public class Insert extends javax.swing.JDialog {
         dateOfBirth.setMaximumSize(new java.awt.Dimension(350, 22));
         dateOfBirth.setMinimumSize(new java.awt.Dimension(350, 22));
         dateOfBirth.setPreferredSize(new java.awt.Dimension(350, 22));
+        dateOfBirth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateOfBirthActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -263,6 +269,20 @@ public class Insert extends javax.swing.JDialog {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 24);
         getContentPane().add(dateOfBirth, gridBagConstraints);
+        JButton button = (JButton) dateOfBirth.getComponent(1);
+        button.setText("Select a date");
+
+        // tamaño del botón
+        button.setPreferredSize(new java.awt.Dimension(100, 22));
+        button.setMinimumSize(new java.awt.Dimension(100, 22));
+        button.setMaximumSize(new java.awt.Dimension(100, 22));
+
+        // quitar margen interno
+        button.setMargin(new java.awt.Insets(0,0,0,0));
+
+        // refrescar
+        button.revalidate();
+        button.repaint();
 
         pack();
         setLocationRelativeTo(null);
