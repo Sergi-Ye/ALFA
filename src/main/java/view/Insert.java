@@ -122,6 +122,11 @@ public class Insert extends javax.swing.JDialog {
                 nameMouseClicked(evt);
             }
         });
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
         name.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 nameKeyReleased(evt);
@@ -316,6 +321,10 @@ public class Insert extends javax.swing.JDialog {
     }//GEN-LAST:event_resetActionPerformed
 
     private void nifKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nifKeyTyped
+        if(nif.getForeground().equals(new Color(153, 153, 153))){
+                nif.setText("");
+                nif.setForeground(Color.black);
+        }
         if (!isNumber(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only numbers [0-9]", this.getTitle(), JOptionPane.ERROR_MESSAGE);
             evt.consume();
@@ -323,6 +332,10 @@ public class Insert extends javax.swing.JDialog {
     }//GEN-LAST:event_nifKeyTyped
 
     private void nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameKeyTyped
+        if(name.getForeground().equals(new Color(153, 153, 153))){
+                name.setText("");
+                name.setForeground(Color.black);
+        }
         if (!isLetter(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only uppercase or lowercase letters, hyphens, and whitespace.", this.getTitle(), JOptionPane.ERROR_MESSAGE);
             evt.consume();
@@ -369,6 +382,10 @@ public class Insert extends javax.swing.JDialog {
         name.setText("");
         name.setForeground(Color.black);
     }//GEN-LAST:event_nameMouseClicked
+
+    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.jdatepicker.JDatePicker dateOfBirth;

@@ -173,6 +173,10 @@ public class Delete extends javax.swing.JDialog {
     }//GEN-LAST:event_nifKeyReleased
 
     private void nifKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nifKeyTyped
+        if(nif.getForeground().equals(new Color(153, 153, 153))){
+                nif.setText("");
+                nif.setForeground(Color.black);
+        }
         if (!isNumber(evt.getKeyChar()) && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE && evt.getKeyChar() != KeyEvent.VK_DELETE) {
             JOptionPane.showMessageDialog(this, "Type only numbers [0-9]", this.getTitle(), JOptionPane.ERROR_MESSAGE);
             evt.consume();
