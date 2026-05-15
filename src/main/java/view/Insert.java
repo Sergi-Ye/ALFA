@@ -369,7 +369,9 @@ public class Insert extends javax.swing.JDialog {
         name.setText("");
         name.setForeground(Color.black);
     }//GEN-LAST:event_nameMouseClicked
+    private void dateOfBirthActionPerformed(java.awt.event.ActionEvent evt) {
 
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.jdatepicker.JDatePicker dateOfBirth;
     private javax.swing.JButton insert;
